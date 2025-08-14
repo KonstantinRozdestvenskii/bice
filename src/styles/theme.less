@@ -1,0 +1,48 @@
+@main-color: rgba(160, 74, 51);
+@main-text-color: #343434;
+@shadow-color: #f2e1dd;
+@product-title-color: #891d00;
+
+
+.flex-between-center() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-mixin() {
+  box-shadow: 10px 10px @shadow-color;
+  border: 1px solid @main-color;
+  box-sizing: border-box;
+}
+
+.btn-mixin() {
+  display: block;
+  background-color: @main-color;
+  color: white;
+  cursor: pointer;
+  font-family: Montserrat-Medium, sans-serif;
+  border: 1px solid @main-color;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 19px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+  width: 380px;
+  height: 56px;
+  line-height: 1;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.old-price-mixin() {
+  text-decoration: line-through;
+  color: black;
+}
+
+.new-price-mixin() {
+  font-family: Montserrat-SemiBold, sans-serif;
+  font-weight: bold;
+}
+
